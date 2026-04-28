@@ -7,9 +7,9 @@ try:
     print("Loading model and tokenizer...")
     tokenizer = AutoTokenizer.from_pretrained(model_id)
     model = AutoModelForSeq2SeqLM.from_pretrained(model_id)
-    print("✅ Success! Model loaded without using deprecated pipelines.")
+    print("Model loaded without using deprecated pipelines.")
 except Exception as e:
-    print(f"❌ ERROR: {e}")
+    print(f"ERROR: {e}")
     model = None
 
 def translate_text(text):
